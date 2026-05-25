@@ -1,0 +1,9 @@
+backend/
+maternaicareflow/
+node_modules/
+.git/
+.env
+*.pyc
+__pycache__/
+venv/
+.venv/
