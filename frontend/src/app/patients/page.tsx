@@ -35,11 +35,11 @@ export default function PatientsPage() {
 
   function getMockPatients(): Patient[] {
     return [
-      { patient_id: 'PAT-001', first_name: 'Maria', last_name: 'Santos', age: 28, risk_level: 'high', risk_score: 65, pregnancy_week: 34, is_emergency: false, missed_appointments: 2, created_at: new Date().toISOString() },
-      { patient_id: 'PAT-002', first_name: 'Jane', last_name: 'Doe', age: 32, risk_level: 'emergency', risk_score: 88, pregnancy_week: 28, is_emergency: true, missed_appointments: 3, created_at: new Date().toISOString() },
-      { patient_id: 'PAT-003', first_name: 'Sarah', last_name: 'Johnson', age: 25, risk_level: 'low', risk_score: 15, pregnancy_week: 20, is_emergency: false, missed_appointments: 0, created_at: new Date().toISOString() },
-      { patient_id: 'PAT-004', first_name: 'Amara', last_name: 'Okafor', age: 30, risk_level: 'medium', risk_score: 35, is_emergency: false, missed_appointments: 1, created_at: new Date().toISOString() },
-      { patient_id: 'PAT-005', first_name: 'Lisa', last_name: 'Chen', age: 35, risk_level: 'high', risk_score: 72, pregnancy_week: 36, is_emergency: false, missed_appointments: 4, created_at: new Date().toISOString() },
+      { patient_id: 'PAT-001', first_name: 'Maria', last_name: 'Santos', age: 28, risk_level: 'high', risk_score: 65, pregnancy_week: 34, is_emergency: false, is_active: true, missed_appointments: 2, created_at: new Date().toISOString() },
+      { patient_id: 'PAT-002', first_name: 'Jane', last_name: 'Doe', age: 32, risk_level: 'emergency', risk_score: 88, pregnancy_week: 28, is_emergency: true, is_active: true, missed_appointments: 3, created_at: new Date().toISOString() },
+      { patient_id: 'PAT-003', first_name: 'Sarah', last_name: 'Johnson', age: 25, risk_level: 'low', risk_score: 15, pregnancy_week: 20, is_emergency: false, is_active: true, missed_appointments: 0, created_at: new Date().toISOString() },
+      { patient_id: 'PAT-004', first_name: 'Amara', last_name: 'Okafor', age: 30, risk_level: 'medium', risk_score: 35, is_emergency: false, is_active: true, missed_appointments: 1, created_at: new Date().toISOString() },
+      { patient_id: 'PAT-005', first_name: 'Lisa', last_name: 'Chen', age: 35, risk_level: 'high', risk_score: 72, pregnancy_week: 36, is_emergency: false, is_active: true, missed_appointments: 4, created_at: new Date().toISOString() },
     ];
   }
 

@@ -23,6 +23,7 @@ export interface Patient {
   email?: string;
   pregnancy_week?: number;
   is_emergency: boolean;
+  is_active: boolean;
   missed_appointments: number;
   created_at: string;
 }
