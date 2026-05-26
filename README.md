@@ -15,6 +15,7 @@ MaternaI CareFlow orchestrates the full lifecycle of maternal/postnatal patient 
 | Workflows | UiPath Maestro (BPMN 2.0) |
 | Notifications | Twilio (SMS), SendGrid (Email) |
 | License | MIT |
+| Agent Type | Coded (Python + TypeScript, UiPath Maestro API integration) |
 
 ## Key Features
 
