@@ -11,7 +11,7 @@
     },
     "backend": {
       "root": "backend",
-      "entrypoint": "backend/app/main.py",
+      "entrypoint": "app.main:app",
       "routePrefix": "/_/backend"
     }
   }
