@@ -42,11 +42,15 @@ async def lifespan(app: FastAPI):
         await seed_initial_data()
     except Exception as e:
         logger.error(f"Database initialization failed: {e}")
-        raise
+        logger.warning("Starting without database - health check will report DB status")
+        app.state.db_connected = False
+    else:
+        app.state.db_connected = True
 
     yield
 
-    client.close()
+    if client:
+        client.close()
     logger.info("MaternAI CareFlow shutdown complete")
 
 
@@ -74,11 +78,13 @@ app.include_router(analytics.router)
 
 @app.get("/api/health")
 async def health_check():
+    db_ok = getattr(app.state, "db_connected", False)
     return {
-        "status": "healthy",
+        "status": "healthy" if db_ok else "degraded",
         "service": "MaternAI CareFlow",
         "version": "1.0.0",
         "environment": settings.environment,
+        "database": "connected" if db_ok else "disconnected",
     }
 
 
