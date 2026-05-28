@@ -29,6 +29,7 @@ logger = logging.getLogger(__name__)
 async def lifespan(app: FastAPI):
     """Application lifecycle: initialize DB connection and seed data."""
     logger.info(f"Starting MaternAI CareFlow in {settings.environment} mode")
+    client = None
     try:
         client = AsyncIOMotorClient(settings.mongodb_uri)
         await init_beanie(
